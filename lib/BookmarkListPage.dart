@@ -10,7 +10,7 @@ class BookmarkListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final BookmarkModel bookmarkModel = Provider.of<BookmarkModel>(context);
-    bookmarkModel.getBookmarks();
+    bookmarkModel.updateBookmarks();
     final List<Bookmark> bookmarks = bookmarkModel.bookmarks;
     if (!bookmarkModel.dataLoaded) {
       return CircularProgressIndicator();

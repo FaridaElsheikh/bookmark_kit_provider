@@ -5,7 +5,7 @@ import 'BookmarkListPage.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(ChangeNotifierProvider<BookmarkModel>(child: App()));
+  runApp(ChangeNotifierProvider<BookmarkModel>(create:(context)=> BookmarkModel(),child: App()));
 }
 
 class App extends StatelessWidget {

@@ -14,18 +14,18 @@ class BookmarkModel extends ChangeNotifier {
     _dataLoaded = dataLoaded;
   }
 
-  set bookmarks(List<Bookmark> value) {
-    _bookmarks = value;
+  set bookmarks(List<Bookmark> bookmarkList) {
+    _bookmarks = bookmarkList;
     dataLoaded=true;
     notifyListeners();
   }
 
   List<Bookmark> get bookmarks => _bookmarks;
 
-  void getBookmarks() {
-    BookmarkAPI bookmarkData = BookmarkAPI();
-    bookmarkData.fetchBookmarks().then((value) {
+  void updateBookmarks() {
+    BookmarkAPI().fetchBookmarks().then((value) {
       bookmarks = value;
+
     });
   }
 }
