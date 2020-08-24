@@ -15,9 +15,10 @@ class BookmarkAPI {
       for (var jsonBookmark in jsonBookmarks) {
         bookmarks.add(Bookmark.fromJson(jsonBookmark));
       }
+      return bookmarks;
     } else {
       throw Exception('Failed to load bookmark');
     }
-    return bookmarks;
+
   }
 }

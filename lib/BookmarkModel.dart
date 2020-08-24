@@ -15,8 +15,8 @@ class BookmarkModel extends ChangeNotifier {
   }
 
   set bookmarks(List<Bookmark> value) {
-    dataLoaded=true;
     _bookmarks = value;
+    dataLoaded=true;
     notifyListeners();
   }
 
