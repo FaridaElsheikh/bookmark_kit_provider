@@ -1,14 +1,15 @@
 import 'dart:convert';
-import 'Bookmark.dart';
+
 import 'package:http/http.dart' as http;
+import 'package:trials/data/bookmark.dart';
+import 'package:trials/resources/constants.dart';
+
 
 class BookmarkAPI {
-  final String url =
-      'http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=a6fa28ece8a24448bf2f618fc20bdf18';
+
 
   Future<List<Bookmark>> fetchBookmarks() async {
-    final response = await http.get(url);
-
+    final response = await http.get(constants.url);
 
     if (response.statusCode == 200) {
       List<Bookmark> bookmarks = List();

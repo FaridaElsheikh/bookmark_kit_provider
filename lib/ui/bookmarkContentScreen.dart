@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:trials/data/bookmark.dart';
 
-import 'Bookmark.dart';
+
 
 class BookMarkScreen extends StatelessWidget {
   final Bookmark bookmark;

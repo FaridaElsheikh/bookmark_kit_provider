@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:trials/BookmarkModel.dart';
-import 'BookmarkListPage.dart';
+import 'package:trials/data/bookmarkModel.dart';
+
+import 'ui/bookmarkListPage.dart';
 import 'package:provider/provider.dart';
 
 void main() {

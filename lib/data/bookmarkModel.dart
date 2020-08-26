@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:trials/Bookmark.dart';
-import 'package:trials/Bookmark_API.dart';
+import 'bookmark.dart';
+import 'file:///D:/FlutterProjects/bookmark_kit_provider/lib/logic/bookmark_API.dart';
 
 enum State { initial, loading, loaded, error }
 

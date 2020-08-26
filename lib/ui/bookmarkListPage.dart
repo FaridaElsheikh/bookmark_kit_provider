@@ -1,18 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:trials/BookmarkModel.dart';
+import 'package:trials/data/bookmark.dart';
+import 'package:trials/data/bookmarkModel.dart';
 
-import 'Bookmark.dart';
-import 'BookmarkContentScreen.dart';
+import 'bookmarkContentScreen.dart';
 
 class BookmarkListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final BookmarkModel bookmarkModel = Provider.of<BookmarkModel>(context);
-    bookmarkModel.updateBookmarks();
+
     final List<Bookmark> bookmarks = bookmarkModel.bookmarks;
     if (!bookmarkModel.dataLoaded) {
+      bookmarkModel.updateBookmarks();
       return CircularProgressIndicator();
     } else {
       print("building");
